@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: api
+  labels:
+    component: "api"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        component: "api"
+    spec:
+      containers:
+      - name: api
+        image: sho2010/sample-api:latest
+        ports:
+          - containerPort: 50051
+        command: ["sh", "-c", "bundle exec rails server"]
+      - name: fluentd
+        image: fluent/fluentd:latest

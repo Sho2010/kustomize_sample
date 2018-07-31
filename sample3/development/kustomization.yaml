@@ -1,0 +1,10 @@
+bases:
+- ../base
+
+imageTags:
+  - name: sho2010/sample-api
+    newTag: awesome_version
+  - name: fluent/fluentd
+    newTag: v0.12.43
+
+

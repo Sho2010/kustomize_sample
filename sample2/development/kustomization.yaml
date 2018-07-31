@@ -1,0 +1,8 @@
+bases:
+- ../base
+
+resources:
+- api_lb.yaml
+
+patches:
+- ./api_deployment_patch.yaml

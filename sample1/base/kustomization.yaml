@@ -1,0 +1,7 @@
+commonLabels:
+  app: kustomize-sample
+
+resources:
+- api_deployment.yaml
+- api_service.yaml
+
